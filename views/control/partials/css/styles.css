@@ -1,0 +1,21 @@
+.top-margin {
+  margin-top: 20px;
+}
+
+.top-margin-xl {
+  margin-top: 100px;
+}
+
+.hideContent {display:none;}
+
+.link-pointer {
+  cursor: "pointer";
+}
+
+.w3-ripple-red::after {
+  background-color: red;
+}
+
+.coursetag {
+	
+}

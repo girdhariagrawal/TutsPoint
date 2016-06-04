@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Admin</title>
+    <link rel="stylesheet" href="partials/css/w3.css">
+    <link rel="stylesheet" href="partials/css/styles.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body onLoad="w3_open()">
+      <div class="w3-col m2 l2 w3-sidenav w3-blue w3-animate-left w3-large w3-hide-small w3-hide-medium">
+        <div class="w3-center top-margin">
+          <img src="partials/images/administrator.png" class="w3-circle" alt="admin" height="150px" width="150px">
+        </div>
+        <div class="w3-section-16">
+          <a ui-sref="manageuser"><i class="fa fa-tachometer"></i> Dashboard</a>
+        </div>
+       <!--  <div class="w3-section-16">
+          <a ui-sref="manageuser"><i class="fa fa-user-plus"></i> Manage User</a>
+        </div> -->
+        <div class="w3-section-16">
+          <a href="#"><i class="fa fa-book"></i> Courses</a>
+        </div>
+        <div class="w3-section-16">
+          <a href="#"><i class="fa fa-graduation-cap"></i> Courses Content</a>
+        </div>
+        <div class="w3-section">
+          <a href="#"><i class="fa fa-phone"></i> Contact Us</a>
+        </div>
+
+        <div class="w3-section-16 w3-center">
+          <div class="w3-btn-floating-large w3-pale-blue"><i>&times;</i></div>
+        </div>
+      </div>
+      <nav class="w3-sidenav w3-blue w3-animate-left w3-hide-large" style="width:80px;">
+        <div class="w3-col top-margin-xl left-padding-sm">
+          <div class="w3-section-8 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-user-plus w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-users w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-suitcase w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-lightbulb-o w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-file-text-o w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-graduation-cap w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center">
+            <div><i class="w3-btn w3-blue fa fa-phone w3-xxlarge"></i></div>
+          </div>
+          <div class="w3-section-24 w3-center w3-tooltip">
+            <div class="w3-btn-floating w3-white w3-hover-red"><i>&times;</i></div>
+            <!-- <span style="position:absolute;left:0;bottom:8px"class="w3-text w3-tag w3-tiny">Settings</span> -->
+          </div>
+        </div>
+      </nav>
+  </body>
+</html>

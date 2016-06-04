@@ -1,0 +1,21 @@
+<div class="w3-container" ng-controller="LoginCtrl">
+ <form name="loginForm" ng-submit="login()" novalidate="">
+   <div  class="w3-row w3-row-padding">
+     <p class="w3-col">
+       <label>Username</label>
+       <input type="text" class="w3-input" ng-model="user.name" placeholder="Enter Your Username" required>
+     </p>
+   </div>
+   <div  class="w3-row w3-row-padding">
+     <p class="w3-col">
+       <label>Password</label>
+       <input type="password" class="w3-input" ng-model="user.password" placeholder="Enter Your Password" required>
+     </p>
+   </div>
+   <p>
+     <button type="submit" class="w3-btn w3-border w3-border-green w3-white w3-round w3-ripple" ng-disabled="loginForm.$invalid">
+      <span class="fa fa-sign-in"></span> Sign In
+     </button>
+   </p>
+  </form>
+ </div>

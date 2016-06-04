@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Contact Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="partials/css/w3.css">
+<link rel="stylesheet" href="partials/css/styles.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<body class="w3-container w3-section" ng-app="TutsPoint">
+
+<!-- Contact us -->
+<div class="w3-container w3-animate-opacity" ng-controller="ContactCtrl">
+  <h2>Contact Us</h2>
+  <form onsubmit="false"class="w3-container">
+    <div class="w3-row-padding">
+      <p class="w3-col m12">
+        <label>Address</label>
+        <textarea class="w3-input" placeholder="Enter Address" ng-model="our.address"></textarea>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <p class="w3-col m4">
+        <label>Email ID</label>
+        <input class="w3-input" type="email" placeholder="Enter Email" ng-model="our.email">
+      </p>
+    <p class="w3-col m4">
+      <label>Phone No.</label>
+      <input class="w3-input" type="number" placeholder="Enter Phone Number" ng-model="our.phone">
+    </p>
+    <p class="w3-col m4">
+      <label>Fax Number</label>
+      <input class="w3-input" type="number" placeholder="Enter Fax Number" ng-model="our.fax">
+    </p>
+  </div>
+  <div class="w3-row-padding">
+    <button class="w3-btn w3-white w3-border w3-border-teal w3-round w3-ripple" ng-click="saveContact()"><span class="fa fa-save"></span> Save </button>
+  </div>
+  </form>
+</div>
+<script src="partials/js/script.js"></script>
+</body>
+</html>

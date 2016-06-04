@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="partials/css/w3.css">
+    <link rel="stylesheet" href="partials/css/styles.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body ng-app="tutsPoint">
+   <div id="main">
+     <div class="w3-col m12 l12 w3-container w3-navbar w3-blue w3-animate-top">
+       <h1 class="w3-center">TutsPoint</h1>
+     </div>
+   </div>
+   <ui-view ></ui-view>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+   <script src="app/app.js"></script>
+   <script src="app/config/config.js"></script>
+   <script src="app/services/authService.js"></script>
+   <script src="app/controllers/mainCtrl.js"></script>
+   <script src="app/controllers/loginCtrl.js"></script>
+  </body>
+ </html>

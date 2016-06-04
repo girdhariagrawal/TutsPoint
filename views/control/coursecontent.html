@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>Settings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="partials/css/w3.css">
+<link rel="stylesheet" href="partials/css/styles.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel='stylesheet' href='partials/css/textAngular.css'>
+
+<body class="w3-container w3-section" ng-app="TutsPoint">
+<div ng-controller="CourseContentCtrl">
+  <div class="w3-row">
+    <a href="#" onclick="changeTab(event, 'video');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Video Tutorial</div>
+    </a>
+    <a href="#" onclick="changeTab(event, 'typed');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Typed Tutorial</div>
+    </a>
+  </div>
+  <!-- Video Tutorial -->
+  <div id="video" class="w3-container hideContent w3-animate-opacity">
+    <h2>Video Tutorial</h2>
+    <form onsubmit="false"class="w3-container">
+      <p>
+        <label>Title</label>
+        <input class="w3-input" type="text">
+      </p>
+      <p>
+        <label>Playlist Name</label>
+        <input class="w3-input" type="text">
+      </p>
+      <p>
+        <label>Description</label>
+        <input class="w3-input" type="text">
+      </p>
+      <p>
+        <label>Browse Video</label>
+        <input class="w3-input" type="file">
+      </p>
+      <button class="w3-btn w3-white w3-border w3-border-teal w3-round w3-ripple"><span class="fa fa-save"></span> Upload </button>
+    </form>
+  </div>
+  <!-- Text Tutorial -->
+  <div id="typed" class="w3-container hideContent w3-animate-opacity">
+    <h2>Typed Tutorial</h2>
+    <form onsubmit="false"class="w3-container">
+      <p>
+        <label>Post Title</label>
+        <input class="w3-input" type="text" ng-model="course.text.title">
+      </p>
+      <p>
+        <label>Course Name</label>
+        <input class="w3-input" type="text" ng-model="course.text.name">    <!-- typeahead to be used -->
+      </p>
+      <p>
+        <label>Short Description</label>
+        <textarea class="w3-input" ng-model="course.text.shortDescription"></textarea>
+      </p>
+      <p>
+        <label>Content</label>
+        <div text-angular ng-model="course.text.courseContent">/**<br>UI Change ho jayega<br>**/</div>
+      </p>
+      <button class="w3-btn w3-white w3-border w3-border-teal w3-round w3-ripple" ng-click="saveCourse()"><span class="fa fa-save"></span> Save </button>
+    </form>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-resource.min.js"></script>
+<!-- <script src="app/app.js"></script> -->
+<script src='partials/js/textAngular-rangy.min.js'></script>
+<script src='partials/js/textAngular-sanitize.min.js'></script>
+<script src='partials/js/textAngular.min.js'></script>
+<script src="app/services/courseService.js"></script>
+<script src="app/controllers/courseContentCtrl.js"></script>
+<script src="partials/js/script.js"></script>
+</body>
+</html>

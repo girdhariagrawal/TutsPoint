@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>Settings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="partials/css/w3.css">
+<link rel="stylesheet" href="partials/css/styles.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<body ng-app="TutsPoint">
+<div class="w3-container w3-section" ng-controller="CourseCtrl">
+
+<form id="courses" class="w3-container w3-animate-opacity" ng-submit="addCourse()">
+  <p>
+        <label>Add New Course</label>
+        <input type="text" class="w3-input"placeholder="Course Name" ng-model="coursename">
+  </p>
+  <p>
+    <button type="submit" class="w3-btn w3-white w3-border w3-border-green w3-round w3-ripple">Add <span class="fa fa-plus"></span></button>
+  </p>
+</form>
+<div>
+  <div class="coursetag" ng-repeat="course in courses | filter : coursename">
+  	<a ui-sref="nowhere"><p>{{course.Name}} <span class="w3-badge w3-green">{{course.ContentCount}}</span></p> </a>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+<!-- <script src="app/app.js"></script> -->
+<script src="app/services/courseService.js"></script>
+<script src="app/controllers/courseCtrl.js"></script>
+<script src="partials/js/script.js"></script>
+</div>
+</body>
+</html>
